@@ -3,13 +3,13 @@ var AppDispatcher = require('../dispatcher/AppDispatcher');
 var EventEmitter = require('events').EventEmitter;
 var assign = require('object-assign');
 var ArticleConstants = require('../constants/ArticleConstants');
-var $=require("jquery");
+//var jQuery=require("jquery");
 
 var ArticleStore=assign({}, EventEmitter.prototype, {
 
 	items:[],
 	initialItems:null,
-
+	url:"./article.json",
 	getAll: function(){
 		return this.items;
 	},
@@ -17,12 +17,24 @@ var ArticleStore=assign({}, EventEmitter.prototype, {
 		var self=this;
 
 		if(self.initialItems==undefined){
-			
+
 			//Load from the file for the first time only, then filter by keyword and page
-			$.get("./article.json", function(result){
+		    var xmlHttp = new XMLHttpRequest();
+	   	 	xmlHttp.onreadystatechange = function() {
+		        if (xmlHttp.readyState == 4 && xmlHttp.status == 200){		        			     
+		            var res=xmlHttp.responseText;
+					self.initialItems=JSON.parse(res);
+					self.filterByKeyword(page, "");
+		    	}
+	    	}
+	    	xmlHttp.open("GET", self.url, false);
+	    	xmlHttp.send(null);
+    
+	    	/*
+			jQuery.get("./article.json", function(result){
 				self.initialItems=result;
 				self.filterByKeyword(page, "");
-			});
+			});*/
 		}
 		else{
 			//Directly filter the data as the data has been previously downloaded

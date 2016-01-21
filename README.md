@@ -24,3 +24,13 @@
     image: "http://placehold.it/300x250&text=image 1"
 }
 ```
+## Assumptions by Edward
+- start page : index.html
+- initial items load = 2 : upon first page load it will load 2 items, when user clicks load more it will load additional 2 items to the UI
+- components : ArticleListApp and ArticleList
+- actions : ArticleListActions
+- constants : ArticleListConstants
+- dispatcher : AppDispatcher
+- stores : ArticleStore
+- list of articles are fetched from “article.json”
+- jest is used for unit testing
