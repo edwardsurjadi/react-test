@@ -1,0 +1,41 @@
+
+
+/* COLOR PALETTE */
+
+$lightgray:#fafafa;
+$lightgray2:#e7e9ec;
+
+$darkgray:#b8b8b8;
+$black:#212121;
+
+$yellow:orange;
+
+
+
+/* FUNCTIONAL CSS */
+
+$brandcolor:red;
+$backgroundMenu:white;
+
+$borderBox:$lightgray2;
+$backgroundBox:$lightgray;
+
+$backgroundBody:$lightgray2;
+
+$foregroundText:$black;
+$foregroundHoverText:$yellow;
+$foregroundSubtitle:$darkgray;
+
+
+$default-text-shadow-color: rgba(black, 0.6);
+$default-text-shadow-blur: 3px;
+$default-text-shadow-v-offset: 1px;
+
+*{
+	box-sizing:border-box;
+}
+
+body{
+	background-color:$backgroundBody !important;
+	font-family:Tahoma !important;
+}

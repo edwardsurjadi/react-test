@@ -1,0 +1,194 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* COLOR PALETTE */
+/* FUNCTIONAL CSS */
+/* line 34, ../sass/_base.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 38, ../sass/_base.scss */
+body {
+  background-color: #e7e9ec !important;
+  font-family: Tahoma !important;
+}
+
+/*
+	class selector : m-book (book module)
+	description : module for book information
+*/
+/* line 6, ../sass/_module.scss */
+.m-book {
+  margin-top: 10px;
+  border-radius: 2px;
+  background-color: #fafafa;
+  position: relative;
+  -moz-box-shadow: #888888 0px 0px 3px;
+  -webkit-box-shadow: #888888 0px 0px 3px;
+  box-shadow: #888888 0px 0px 3px;
+}
+/* line 13, ../sass/_module.scss */
+.m-book .cover {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 120px;
+  height: 100%;
+  border-radius: 2px;
+  overflow: hidden;
+}
+/* line 23, ../sass/_module.scss */
+.m-book .content {
+  padding: 20px 20px 30px 140px;
+}
+/* line 25, ../sass/_module.scss */
+.m-book .content h1 {
+  color: #212121;
+  font-weight: normal;
+  font-size: 18px;
+}
+/* line 30, ../sass/_module.scss */
+.m-book .content h2 {
+  margin-top: 5px;
+  color: #b8b8b8;
+  font-size: 14px;
+}
+/* line 37, ../sass/_module.scss */
+.m-book .action {
+  border-top: 1px solid #e7e9ec;
+  padding: 10px 10px 10px 140px;
+}
+/* line 41, ../sass/_module.scss */
+.m-book .action a {
+  font-size: 12px;
+  color: #212121;
+  margin-right: 20px;
+}
+/* line 46, ../sass/_module.scss */
+.m-book .action a:hover {
+  color: orange;
+  text-decoration: none;
+}
+
+/* line 55, ../sass/_module.scss */
+.m-searchbox {
+  height: 50px;
+  display: block;
+  width: 100%;
+  padding-top: 14px;
+  padding-left: 30px;
+  background-color: white;
+}
+/* line 64, ../sass/_module.scss */
+.m-searchbox h1 {
+  display: inline;
+  margin-right: 10px;
+}
+/* line 69, ../sass/_module.scss */
+.m-searchbox input {
+  width: calc(100% - 80px);
+}
+
+/* line 74, ../sass/_module.scss */
+.m-loadmore {
+  display: block;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 1, ../sass/_layout.scss */
+#header {
+  width: 100%;
+  height: 50px;
+  background-color: red;
+  color: white;
+  font-size: 20px;
+  padding: 15px 0px 15px 10px;
+}
+/* line 10, ../sass/_layout.scss */
+#header img {
+  vertical-align: middle;
+}
+
+/*
+	Mobile First Approach, menu button is visible on small screen, and it's hidden for bigger screen
+*/
+/* line 21, ../sass/_layout.scss */
+#topmenu-button {
+  visibility: visible;
+}
+
+@media (min-width: 768px) {
+  /* line 25, ../sass/_layout.scss */
+  #topmenu-button {
+    visibility: hidden;
+  }
+}
